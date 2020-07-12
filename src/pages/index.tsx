@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import styled from 'styled-components';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
+
+const StyledImageContainer = styled.div`
+  max-width: 300px;
+  margin-bottom: 1.45rem;
+`;
 
 function IndexPage() {
   return (
@@ -12,9 +18,9 @@ function IndexPage() {
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
+      <StyledImageContainer>
         <Image />
-      </div>
+      </StyledImageContainer>
       <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
   );

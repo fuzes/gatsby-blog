@@ -6,10 +6,17 @@
  */
 
 import React, { ReactNode } from 'react';
+import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import './layout.css';
 import Header from './header';
+
+const StyledLayoutContainer = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.45rem 1.0875rem;
+`;
 
 interface LayoutProps {
   children: ReactNode;
@@ -29,18 +36,14 @@ function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0 1.0875rem 1.45rem',
-        }}
-      >
+      <StyledLayoutContainer>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}
+, Built with
+<a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </StyledLayoutContainer>
     </>
   );
 }
