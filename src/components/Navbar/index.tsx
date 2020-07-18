@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import NavbarLinks from './NavbarLinks';
+import NavbarLinks from './NavbarLink';
 import Logo from '../Logo';
-import { Toggle, HamburgerStyle, NavbarContainer, NavboxContainer } from './Navbar.style';
+import { Toggle, HamburgerStyle, NavbarContainer, NavboxContainer } from './style';
 
-function Navbar() {
+function Navbar(): JSX.Element {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <NavbarContainer>

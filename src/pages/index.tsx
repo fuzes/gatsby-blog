@@ -10,7 +10,7 @@ const StyledImageContainer = styled.div`
   margin-bottom: 1.45rem;
 `;
 
-function IndexPage() {
+function IndexPage(): JSX.Element {
   return (
     <Layout>
       <SEO title="Home" />
@@ -20,7 +20,8 @@ function IndexPage() {
       <StyledImageContainer>
         <Image />
       </StyledImageContainer>
-      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Link to="/page-2/">Go to page 2</Link>
+      <br />
     </Layout>
   );
 }

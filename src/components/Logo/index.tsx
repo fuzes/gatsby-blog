@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
-import { LogoContainer } from './Logo.style';
+import { LogoContainer } from './style';
 
-function Logo({ setNavbarOpen }) {
+type LogoProps = {
+  setNavbarOpen;
+};
+
+export default function Logo({ setNavbarOpen }: LogoProps): JSX.Element {
   return (
     <LogoContainer>
       <Link
@@ -29,5 +33,3 @@ function Logo({ setNavbarOpen }) {
     </LogoContainer>
   );
 }
-
-export default Logo;

@@ -16,7 +16,7 @@ interface SEOProps {
   meta?: [] | undefined;
 }
 
-function SEO({ description = '', language = 'ko', meta = [], title }: SEOProps) {
+function SEO({ description = '', language = 'ko', meta = [], title }: SEOProps): JSX.Element {
   const { site } = useStaticQuery(
     graphql`
       query {

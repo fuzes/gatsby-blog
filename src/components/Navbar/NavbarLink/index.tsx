@@ -9,14 +9,14 @@ const StyledNavItem = styled(Link)`
   :hover {
     color: saddlebrown;
   }
-  
+
   @media (max-width: 768px) {
     margin-right: 0;
     margin-bottom: 1vh;
   }
 `;
 
-function NavbarLinks() {
+function NavbarLinks(): JSX.Element {
   return (
     <>
       <StyledNavItem to="/">About</StyledNavItem>
