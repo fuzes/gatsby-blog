@@ -8,12 +8,20 @@
 import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import './layout.css';
+import { css } from '@emotion/core';
 import Header from './header';
+import LeftPanel from './LeftPanel';
 
-const StyledLayoutContainer = styled.div`
+const LayoutContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.45rem 1.0875rem;
+  padding: 4vh 8vh;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  @media (max-width: 768px) {
+    padding: 3vh 6vh;
+    flex-direction: column;
+  }
 `;
 
 interface LayoutProps {
@@ -24,14 +32,21 @@ function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <>
       <Header />
-      <StyledLayoutContainer>
-        <main>{children}</main>
+      <LayoutContainer>
+        <LeftPanel />
+        <main
+          css={css`
+            flex: 1 0 auto;
+          `}
+        >
+          {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}
 , Built with
 <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </StyledLayoutContainer>
+      </LayoutContainer>
     </>
   );
 }
