@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import { LogoContainer } from './Logo.style';
 
-function Logo() {
+function Logo({ setNavbarOpen }) {
   return (
     <LogoContainer>
       <Link
@@ -12,6 +12,7 @@ function Logo() {
           color: black;
         `}
         to="/"
+        onClick={() => setNavbarOpen(false)}
       >
         <h3
           css={css`

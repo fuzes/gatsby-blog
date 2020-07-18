@@ -7,7 +7,7 @@ function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <NavbarContainer>
-      <Logo />
+      <Logo setNavbarOpen={setNavbarOpen} />
       <Toggle open={navbarOpen} onClick={() => setNavbarOpen(!navbarOpen)}>
         <HamburgerStyle open={navbarOpen} />
       </Toggle>
