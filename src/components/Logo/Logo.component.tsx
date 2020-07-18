@@ -18,6 +18,9 @@ function Logo({ setNavbarOpen }) {
           css={css`
             margin: 0;
             color: black;
+            :hover {
+              color: saddlebrown;
+            }
           `}
         >
           fuzes blog

@@ -5,20 +5,21 @@ type OpenStatus = {
 };
 
 const NavbarContainer = styled.nav`
-  height: 10vh;
+  height: 8vh;
   display: flex;
   background-color: #fff;
   position: relative;
   justify-content: space-between;
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
-  padding: 0 5vh;
+  padding: 0 8vh;
   z-index: 2;
   align-self: center;
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 8vh;
+    height: 6vh;
+    padding: 0 6vh;
     top: 0;
     bottom: 0;
     left: 0;
@@ -42,8 +43,10 @@ const NavboxContainer = styled.div<OpenStatus>`
   text-transform: uppercase;
   justify-content: flex-end;
   align-items: center;
+  flex: 1 1 auto;
 
   @media (max-width: 768px) {
+    top: 6vh;
     flex-direction: column;
     position: fixed;
     width: 100%;
@@ -51,7 +54,6 @@ const NavboxContainer = styled.div<OpenStatus>`
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
     left: ${(props) => (props.open ? '0' : '100%')};
   }
 `;
