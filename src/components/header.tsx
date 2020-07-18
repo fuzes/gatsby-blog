@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 
 const StyledHeader = styled.header`
   background: darkcyan;
@@ -17,7 +18,7 @@ const StyledH1 = styled.h1`
   color: white;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
 `;

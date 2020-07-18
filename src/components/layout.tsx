@@ -6,11 +6,11 @@
  */
 
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import styled from '@emotion/styled';
 import './layout.css';
 import Header from './header';
+import Navbar from './Navbar';
 
 const StyledLayoutContainer = styled.div`
   margin: 0 auto;
@@ -35,13 +35,13 @@ function Layout({ children }: LayoutProps) {
 
   return (
     <>
+      <Navbar />
       <Header siteTitle={data.site.siteMetadata.title} />
       <StyledLayoutContainer>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}
-, Built with
-<a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Built with
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </StyledLayoutContainer>
     </>

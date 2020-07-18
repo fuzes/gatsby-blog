@@ -1,0 +1,29 @@
+import React from 'react';
+import { Link } from 'gatsby';
+import { css } from '@emotion/core';
+import { LogoContainer } from './Logo.style';
+
+function Logo() {
+  return (
+    <LogoContainer>
+      <Link
+        css={css`
+          text-decoration: none;
+          color: black;
+        `}
+        to="/"
+      >
+        <h3
+          css={css`
+            margin: 0;
+            color: black;
+          `}
+        >
+          fuzes blog
+        </h3>
+      </Link>
+    </LogoContainer>
+  );
+}
+
+export default Logo;
