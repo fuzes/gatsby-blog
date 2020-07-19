@@ -14,13 +14,14 @@ import LeftPanel from './LeftPanel';
 
 const LayoutContainer = styled.div`
   margin: 0 auto;
-  padding: 4vh 8vh;
+  padding: 4vh;
   display: flex;
   flex-direction: row;
   width: 90vw;
   @media (max-width: 768px) {
     padding: 3vh 6vh;
     flex-direction: column;
+    width: 100vw;
   }
 `;
 
